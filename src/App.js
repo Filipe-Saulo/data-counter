@@ -48,7 +48,7 @@ function Counter() {
             <input
               defaultValue={null}
               value={count}
-              onChange={(e) => setCount(e.target.value)}
+              onChange={(e) => setCount(Number(e.target.value))}
             ></input>
             <button onClick={() => setCount((c) => c + step)}>+</button>
             {count != 0 ? <button onClick={() => reset()}>reset</button> : ""}
